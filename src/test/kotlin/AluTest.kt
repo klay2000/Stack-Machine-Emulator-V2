@@ -1,7 +1,9 @@
+import org.junit.Assert.assertFalse
 import org.junit.Test
 import kotlin.test.BeforeTest
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
+import kotlin.test.assertTrue
 
 internal class AluTest {
     private val alu = Alu()
@@ -137,5 +139,77 @@ internal class AluTest {
         alu.b += 1u
 
         assertNotEquals(res, alu.result)
+    }
+
+    @Test
+    fun aIsMoreThanBThenMtIsTrue(){
+        alu.a = 1u
+        alu.b = 0u
+
+        assertTrue(alu.mt)
+    }
+
+    @Test
+    fun aIsMoreThanBThenLtIsFalse(){
+        alu.a = 1u
+        alu.b = 0u
+
+        assertFalse(alu.lt)
+    }
+
+    @Test
+    fun aIsMoreThanBThenEqIsFalse(){
+        alu.a = 1u
+        alu.b = 0u
+
+        assertFalse(alu.eq)
+    }
+
+    @Test
+    fun aIsLessThanBThenLtIsTrue(){
+        alu.a = 3u
+        alu.b = 7u
+
+        assertTrue(alu.lt)
+    }
+
+    @Test
+    fun aIsLessThanBThenMtIsFalse(){
+        alu.a = 3u
+        alu.b = 7u
+
+        assertFalse(alu.mt)
+    }
+
+    @Test
+    fun aIsLessThanBThenEqIsFalse(){
+        alu.a = 3u
+        alu.b = 7u
+
+        assertFalse(alu.eq)
+    }
+
+    @Test
+    fun aIsEqualToBThenEqIsTrue(){
+        alu.a = 9u
+        alu.b = 9u
+
+        assertTrue(alu.eq)
+    }
+
+    @Test
+    fun aIsEqualToBThenMtIsFalse(){
+        alu.a = 9u
+        alu.b = 9u
+
+        assertFalse(alu.mt)
+    }
+
+    @Test
+    fun aIsEqualToBThenLtIsFalse(){
+        alu.a = 9u
+        alu.b = 9u
+
+        assertFalse(alu.lt)
     }
 }

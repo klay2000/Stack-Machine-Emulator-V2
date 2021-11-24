@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AluTest" tests="28" skipped="0" failures="0" errors="0" timestamp="2021-11-23T14:58:51" hostname="DESKTOP-SRQN4L0" time="0.021">
+  <properties/>
+  <testcase name="fCodeIsAdditionThenResultIsAPlusB" classname="AluTest" time="0.015"/>
+  <testcase name="fCodeIsUpdatedThenResultIsUpdated" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsFalseThenResultIsFalse" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsTrueThenResultIsTrue" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsXorThenResultIsAXorB" classname="AluTest" time="0.0"/>
+  <testcase name="aIsEqualToBThenEqIsTrue" classname="AluTest" time="0.001"/>
+  <testcase name="fCodeIsMultiplicationThenResultIsATimesB" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsPassBThenResultIsB" classname="AluTest" time="0.0"/>
+  <testcase name="aIsLessThanBThenMtIsFalse" classname="AluTest" time="0.0"/>
+  <testcase name="aIsMoreThanBThenEqIsFalse" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsNotThenResultIsNotA" classname="AluTest" time="0.0"/>
+  <testcase name="aIsUpdatedThenResultIsUpdated" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsPassAThenResultIsA" classname="AluTest" time="0.0"/>
+  <testcase name="aIsMoreThanBThenMtIsTrue" classname="AluTest" time="0.0"/>
+  <testcase name="aIsLessThanBThenEqIsFalse" classname="AluTest" time="0.0"/>
+  <testcase name="aIsLessThanBThenLtIsTrue" classname="AluTest" time="0.0"/>
+  <testcase name="aIsEqualToBThenMtIsFalse" classname="AluTest" time="0.0"/>
+  <testcase name="bIsUpdatedThenResultIsUpdated" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsSubtractionThenResultIsAMinusB" classname="AluTest" time="0.0"/>
+  <testcase name="aIsMoreThanBThenLtIsFalse" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsDivisionThenResultIsADividedByB" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsDecrementAThenResultIsAMinusOne" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsIncrementAThenResultIsAPlusOne" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsLeftShiftThenResultIsAShiftedLeftB" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsAndThenResultIsAAndB" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsRightShiftThenResultIsAShiftedRightB" classname="AluTest" time="0.0"/>
+  <testcase name="fCodeIsOrThenResultIsAOrB" classname="AluTest" time="0.0"/>
+  <testcase name="aIsEqualToBThenLtIsFalse" classname="AluTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

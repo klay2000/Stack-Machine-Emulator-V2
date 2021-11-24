@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MemoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-21T22:44:06" hostname="DESKTOP-SRQN4L0" time="0.124">
-  <properties/>
-  <testcase name="clearRamClearsRam" classname="MemoryTest" time="0.031"/>
-  <testcase name="allValuesAreInitiallyZero" classname="MemoryTest" time="0.019"/>
-  <testcase name="clearRamDoesNotClearFlash" classname="MemoryTest" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

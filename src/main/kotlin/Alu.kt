@@ -17,7 +17,16 @@ class Alu : IAlu {
             compute()
         }
 
+    override var eq = true
+    override var mt = false
+    override var lt = false
+
     private fun compute(){
+
+        eq = a == b
+        mt = a > b
+        lt = a < b
+
         when(fcode){
             0u -> result = a+b
             1u -> result = a-b
