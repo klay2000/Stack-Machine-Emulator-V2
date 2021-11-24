@@ -12,5 +12,6 @@ fun main(){
     print("loading image...")
     memory.loadDiskImage()
 
+   // memory.saveDiskImage()
 
 }

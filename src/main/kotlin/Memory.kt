@@ -1,6 +1,9 @@
 import MemoryConstants.FLASH_SIZE
 import MemoryConstants.RAM_SIZE
 import java.io.BufferedReader
+import java.io.File
+import java.nio.ByteBuffer
+import java.nio.IntBuffer
 import java.util.*
 
 object MemoryConstants{
@@ -40,7 +43,18 @@ class Memory : IMemory {
     }
 
     override fun saveDiskImage(){
-        // TODO save flash to file on system
+        var file = File("flash.hex")
+
+        if(file.exists()){
+            file.delete()
+        }
+
+        var intFlash = Array<Int>(flash.size) {i -> flash[i].toInt()}
+
+        var bb = ByteBuffer.allocate(intFlash.size*4)
+        bb.asIntBuffer().put(intFlash.toIntArray())
+
+        file.writeBytes(bb.array())
     }
 
     override fun clearRam(){
@@ -48,6 +62,11 @@ class Memory : IMemory {
     }
 
     override fun loadDiskImage(){
-        // TODO load flash from file on system
+        var bArr = File("flash.hex").readBytes()
+
+        for(i in flash.indices){
+            var word = (bArr[i*4].toInt() shr 24) + (bArr[i*4+1].toInt() shr 16) + (bArr[i*4+2].toInt() shr 8) + bArr[i*4+3].toInt()
+            flash[i] = word.toUInt()
+        }
     }
 }
