@@ -43,15 +43,15 @@ class Memory : IMemory {
     }
 
     override fun saveDiskImage(){
-        var file = File("flash.hex")
+        val file = File("flash.hex")
 
         if(file.exists()){
             file.delete()
         }
 
-        var intFlash = Array<Int>(flash.size) {i -> flash[i].toInt()}
+        val intFlash = Array<Int>(flash.size) { i -> flash[i].toInt()}
 
-        var bb = ByteBuffer.allocate(intFlash.size*4)
+        val bb = ByteBuffer.allocate(intFlash.size*4)
         bb.asIntBuffer().put(intFlash.toIntArray())
 
         file.writeBytes(bb.array())
@@ -62,11 +62,15 @@ class Memory : IMemory {
     }
 
     override fun loadDiskImage(){
-        var bArr = File("flash.hex").readBytes()
+        val file = File("flash.hex")
 
-        for(i in flash.indices){
-            var word = (bArr[i*4].toInt() shr 24) + (bArr[i*4+1].toInt() shr 16) + (bArr[i*4+2].toInt() shr 8) + bArr[i*4+3].toInt()
-            flash[i] = word.toUInt()
+        if(file.exists()) {
+            val bArr = file.readBytes()
+
+            for (i in flash.indices) {
+                val word = byteArrayOf(bArr[i * 4], bArr[i * 4 + 1], bArr[i * 4 + 2], bArr[i * 4 + 3])
+                flash[i] = ByteBuffer.wrap(word).getInt().toUInt()
+            }
         }
     }
 }
